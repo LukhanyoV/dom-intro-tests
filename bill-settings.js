@@ -1,4 +1,4 @@
-const BillSettings = _ => {
+const BillSettings = () => {
     
     // initialize me
     let callCost = 0;
@@ -18,22 +18,22 @@ const BillSettings = _ => {
     const setCriticalLevel = n => criticalLevel = n;
 
     // get me
-    const getCallCost = _ => callCost;
-    const getSmsCost = _ => smsCost;
-    const getWarningLevel = _ => warningLevel;
-    const getCriticalLevel = _ => criticalLevel;
+    const getCallCost = () => callCost;
+    const getSmsCost = () => smsCost;
+    const getWarningLevel = () => warningLevel;
+    const getCriticalLevel = () => criticalLevel;
 
     // use me
-    const makeCall = _ => getCriticalLevel() > getTotalCost() ? callCostTotal += getCallCost() : callCostTotal += 0;
-    const makeSms = _ => getCriticalLevel() > getTotalCost() ? smsCostTotal += getSmsCost() : smsCostTotal += 0;
+    const makeCall = () => getCriticalLevel() > getTotalCost() ? callCostTotal += getCallCost() : callCostTotal += 0;
+    const makeSms = () => getCriticalLevel() > getTotalCost() ? smsCostTotal += getSmsCost() : smsCostTotal += 0;
 
     // show me
-    const getCallCostTotal = _ => callCostTotal;
-    const getSmsCostTotal = _ => smsCostTotal;
-    const getTotalCost = _ => totalCost = getSmsCostTotal() + getCallCostTotal();
+    const getCallCostTotal = () => callCostTotal;
+    const getSmsCostTotal = () => smsCostTotal;
+    const getTotalCost = () => totalCost = getSmsCostTotal() + getCallCostTotal();
 
     // color me
-    const classTotal = _ => getTotalCost() >= getCriticalLevel() ? "critical" : getTotalCost() >= getWarningLevel() && "warning";
+    const classTotal = () => getTotalCost() >= getCriticalLevel() ? "critical" : getTotalCost() >= getWarningLevel() && "warning";
 
     return {
         setCallCost,
