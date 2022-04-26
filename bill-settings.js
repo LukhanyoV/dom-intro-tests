@@ -12,10 +12,10 @@ const BillSettings = () => {
     let totalCost = 0;
 
     // set me
-    const setCallCost = n => callCost = n;
-    const setSmsCost = n => smsCost = n;
-    const setWarningLevel = n => warningLevel = n;
-    const setCriticalLevel = n => criticalLevel = n;
+    const setCallCost = (cost) => callCost = cost;
+    const setSmsCost = (cost) => smsCost = cost;
+    const setWarningLevel = (level) => warningLevel = level;
+    const setCriticalLevel = (level) => criticalLevel = level;
 
     // get me
     const getCallCost = () => callCost;
